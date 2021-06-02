@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { Bar } from "react-chartjs-2";
+import styles from "./Camera.module.css";
 
 //Input for the exercise
 const Reps = {
@@ -61,9 +62,14 @@ function Camera() {
   //chart utilities
 
   return (
-    <div className="container">
-      <div className="bar"></div>
-      <div className="camera">
+    <div className={styles.container}>
+      <div className={styles.bar}>
+        <div className={styles.barItem}>
+          <div className={styles.text}></div>
+        </div>
+        <div className={styles.timer}></div>
+      </div>
+      <div className={styles.camera}>
         <video
           height="800"
           width="800"
@@ -72,20 +78,27 @@ function Camera() {
           className="videoFeed"
         ></video>
       </div>
-      <div className="chartbar">
-        <Bar
-          type="bar"
-          data={{
-            labels: [1, 2, 3, 4, 5],
-            datasets: [
-              {
-                label: "dummy data",
-                data: [100, 50, 10, 90, 2],
-                backgroundColor: ["rgb(203, 203,203)"],
-              },
-            ],
-          }}
-        />
+      <div className={styles.chartBar}>
+        <div className={styles.chart}>
+          <Bar
+            type="bar"
+            data={{
+              labels: [1, 2, 3, 4, 5],
+              datasets: [
+                {
+                  label: "dummy data",
+                  data: [100, 50, 10, 90, 2],
+                  backgroundColor: ["rgb(203, 203,203)"],
+                },
+              ],
+            }}
+            width={100}
+            height={50}
+            options={{
+              maintainAspectRatio: false,
+            }}
+          />
+        </div>
       </div>
     </div>
   );

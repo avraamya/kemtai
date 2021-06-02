@@ -1,0 +1,76 @@
+.chartBar {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 30vh;
+    bottom: 0;
+    background: linear-gradient(
+      0deg,
+      rgb(0, 0, 0) 70%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+  .chart {
+    flex-grow: 1;
+    margin: 5px;
+    padding: 5px;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .camera {
+    margin-bottom: 20vh;
+  }
+  .bar {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .text {
+    margin: 5px;
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: black;
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
+  .timer {
+    margin: 5px;
+    padding: 5px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+  }
+  .barItem {
+    flex-grow: 1;
+  }
+  .root {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../../images/bg.jpg);
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  p {
+    color: white;
+    font-size: 4em;
+    font-weight: bold;
+  }
+  
