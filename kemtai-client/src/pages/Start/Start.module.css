@@ -1,0 +1,20 @@
+.root {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../../images/bg.jpg);
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+  font-size: 4em;
+  font-weight: bold;
+  cursor: pointer;
+}

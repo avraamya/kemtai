@@ -1,7 +1,12 @@
+//style
+import styles from "./End.module.css";
+
 function End() {
   return (
-    <div>
-      <p>THANK YOU!</p>
+    <div className={styles.root}>
+      <div className={styles.container}>
+        <p>THANK YOU!</p>
+      </div>
     </div>
   );
 }
