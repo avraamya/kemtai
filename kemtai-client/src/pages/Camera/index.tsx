@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import { Bar } from "react-chartjs-2";
 
 //Input for the exercise
 const Reps = {
@@ -57,15 +58,35 @@ function Camera() {
     };
   }, [history, timeToRedirect]);
 
+  //chart utilities
+
   return (
-    <div className="camera">
-      <video
-        height="800"
-        width="800"
-        muted
-        autoPlay
-        className="videoFeed"
-      ></video>
+    <div className="container">
+      <div className="bar"></div>
+      <div className="camera">
+        <video
+          height="800"
+          width="800"
+          muted
+          autoPlay
+          className="videoFeed"
+        ></video>
+      </div>
+      <div className="chartbar">
+        <Bar
+          type="bar"
+          data={{
+            labels: [1, 2, 3, 4, 5],
+            datasets: [
+              {
+                label: "dummy data",
+                data: [100, 50, 10, 90, 2],
+                backgroundColor: ["rgb(203, 203,203)"],
+              },
+            ],
+          }}
+        />
+      </div>
     </div>
   );
 }
