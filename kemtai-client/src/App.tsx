@@ -1,9 +1,13 @@
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect,
+} from "react-router-dom";
 
-import Start from './pages/Start/';
-import End from './pages/End/';
-import Camera from './pages/Camera/';
-import Test from './pages/Test/';
+import Start from "./pages/Start/";
+import End from "./pages/End/";
+import Camera from "./pages/Camera/";
 
 function App() {
   return (
@@ -12,7 +16,6 @@ function App() {
         <Route path="/start" component={Start} />
         <Route path="/camera" component={Camera} />
         <Route path="/end" component={End} />
-        <Route path="/test" component={Test} />
         <Redirect from="/" to="/start" />
       </Switch>
     </Router>

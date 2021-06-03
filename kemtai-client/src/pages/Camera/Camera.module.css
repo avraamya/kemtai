@@ -16,6 +16,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .camera {
   margin-bottom: 20vh;
 }
@@ -89,13 +90,8 @@ video {
   width: 100%;
   max-width: 500px;
   height: 80%;
-  margin: 0 auto;
+  margin: 0 45px 0 0;
 
-  background-image: linear-gradient(
-    bottom,
-    rgba(0, 0, 0, 0.1) 2%,
-    transparent 2%
-  );
   background-size: 100% 50px;
   background-position: left top;
 }
@@ -108,9 +104,8 @@ li {
 }
 
 span {
-  margin: 0 1em;
+  margin: 0 15px;
   display: block;
-  background: rgba(#d1ecfa, 0.75);
   animation: draw 1s ease-in-out;
 }
 

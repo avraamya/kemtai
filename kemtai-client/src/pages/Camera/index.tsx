@@ -1,13 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
-import { Bar } from "react-chartjs-2";
-import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import styles from "./Camera.module.css";
-import {
-  CircularProgressbar,
-  CircularProgressbarWithChildren,
-  buildStyles,
-} from "react-circular-progressbar";
+import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import AnimatedProgressProvider from "../../util/AnimatedProgressProvider";
 import { easeQuadInOut } from "d3-ease";
@@ -15,7 +9,6 @@ import { easeQuadInOut } from "d3-ease";
 //Input for the exercise
 const Reps = {
   TimeOfMove: [1, 2, 3, 3.5, 4.5, 5, 6, 10, 12, 13, 14, 15.5],
-  //TimeOfMove: [1, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100],
   ScoreOfMove: [60, 72, 10, 60, 70, 80, 90, 100, 90, 40, 0, 20],
 };
 
@@ -118,7 +111,7 @@ function Camera() {
 
   //chart utilities
 
-  var color = totalScore.map((x) => "rgb(207,207,207)");
+  var color = totalScore.map((x) => "linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(190,190,190,1) 100%)");
 
   function argMax(array: number[]) {
     if (array.length === 0) {
@@ -129,7 +122,7 @@ function Camera() {
       .reduce((r: any, a: any) => (a[0] > r[0] ? a : r))[1];
   }
 
-  color[argMax(totalScore)] = "green";
+  color[argMax(totalScore)] = "linear-gradient(0deg, rgba(255,224,0,1) 0%, rgba(120,255,0,1) 100%)";
 
   return (
     <div>
@@ -144,26 +137,6 @@ function Camera() {
             <div className={styles.text}>{time}</div>
           </div>
           <div className={styles.timer}>
-            {/* <CountdownCircleTimer
-              size={50}
-              isPlaying
-              duration={60}
-              colors={[
-                ["#004777", 0.33],
-                ["#F7B801", 0.33],
-                ["#A30000", 0.33],
-              ]}
-            >
-              {({ remainingTime }) => remainingTime}
-            </CountdownCircleTimer> */}
-            {/* <CircularProgressbar
-              value={0}
-              strokeWidth={50}
-              styles={buildStyles({
-                strokeLinecap: "butt",
-                pathTransitionDuration: 0.5,
-              })}
-            /> */}
             <AnimatedProgressProvider
               valueStart={0}
               valueEnd={100}
@@ -193,22 +166,13 @@ function Camera() {
         <div className={styles.chartBar}>
           <div className={styles.chartWrapper}>
             <ul className={styles.chart}>
-              {/* <li>
-                <span
-                  style={{
-                    height: "70%",
-                    backgroundColor: "red",
-                    borderRadius: "50px",
-                  }}
-                ></span>
-              </li> */}
               {totalScore.map((score, index) => {
                 return (
                   <li>
                     <span
                       style={{
                         height: `${(score / maxScore) * 100 + 5}%`,
-                        backgroundColor: `${color[index]}`,
+                        background: `${color[index]}`,
                         borderRadius: "50px",
                       }}
                     ></span>
@@ -216,91 +180,7 @@ function Camera() {
                 );
               })}
             </ul>
-
-            {/* {i < totalScore.length ? (
-              <ul className={styles.chart}>
-                {totalScore.map((score, index) => {
-                  return (
-                    <li>
-                      <span style={{ height: "50%" }}>{"check"}</span>
-                    </li>
-                  );
-                })}
-              </ul>
-            ) : null} */}
-
-            {/* {i < totalScore.length ? (
-              <Bar
-                type="bar"
-                data={{
-                  labels: Array(totalScore.length).fill(""),
-                  datasets: [
-                    {
-                      label: "",
-                      data: totalScore,
-                      backgroundColor: color,
-                    },
-                  ],
-                }}
-                width={100}
-                height={50}
-                options={{
-                  maintainAspectRatio: false,
-                  plugins: {
-                    legend: {
-                      display: false,
-                    },
-                  },
-                }}
-              />
-            ) : null} */}
           </div>
-          {/* <ul
-            style={{
-              display: "table",
-              tableLayout: "fixed",
-              width: "60%",
-              maxWidth: "700px",
-              height: "200px",
-              margin: "0 auto",
-              backgroundImage:
-                "linear-gradient(bottom, rgba(0, 0, 0, 0.1) 2%, transparent 2%)",
-              backgroundSize: " 100% 50px",
-              backgroundPosition: "left top",
-            }}
-          >
-            <li
-              style={{
-                position: "relative",
-                display: "table-cell",
-                verticalAlign: "bottom",
-                height: "200px",
-              }}
-            >
-              <div
-                style={{
-                  position: "absolute",
-                  left: "0",
-                  right: "0",
-                  top: "100%",
-                  padding: "5px 1em 0",
-                  display: "block",
-                  textAlign: "center",
-                }}
-              ></div>
-              <span
-                style={{
-                  margin: "0 1em",
-                  display: "block",
-                  background: "rgba(#d1ecfa, .75)",
-                  animation: "draw 1s ease-in-out",
-                  borderRadius: "50px",
-                  height: "50%",
-                }}
-                title="ActionScript"
-              ></span>
-            </li>
-          </ul> */}
         </div>
       </div>
     </div>
