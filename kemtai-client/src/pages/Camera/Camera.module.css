@@ -10,11 +10,8 @@
     rgba(255, 255, 255, 0) 100%
   );
 }
-.chart {
+.chartWrapper {
   flex-grow: 1;
-  margin: 20px 15px 15px 10px;
-  width: 300px;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,4 +81,41 @@ video {
   font-size: 6em;
   font-weight: bold;
   color: white;
+}
+.chart {
+  display: table;
+  table-layout: fixed;
+
+  width: 100%;
+  max-width: 500px;
+  height: 80%;
+  margin: 0 auto;
+
+  background-image: linear-gradient(
+    bottom,
+    rgba(0, 0, 0, 0.1) 2%,
+    transparent 2%
+  );
+  background-size: 100% 50px;
+  background-position: left top;
+}
+
+li {
+  position: relative;
+  display: table-cell;
+  vertical-align: bottom;
+  height: 200px;
+}
+
+span {
+  margin: 0 1em;
+  display: block;
+  background: rgba(#d1ecfa, 0.75);
+  animation: draw 1s ease-in-out;
+}
+
+@keyframes draw {
+  0% {
+    height: 0;
+  }
 }
