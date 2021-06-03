@@ -111,7 +111,10 @@ function Camera() {
 
   //chart utilities
 
-  var color = totalScore.map((x) => "linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(190,190,190,1) 100%)");
+  var color = totalScore.map(
+    (x) =>
+      "linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(190,190,190,1) 100%)"
+  );
 
   function argMax(array: number[]) {
     if (array.length === 0) {
@@ -122,7 +125,8 @@ function Camera() {
       .reduce((r: any, a: any) => (a[0] > r[0] ? a : r))[1];
   }
 
-  color[argMax(totalScore)] = "linear-gradient(0deg, rgba(255,224,0,1) 0%, rgba(120,255,0,1) 100%)";
+  color[argMax(totalScore)] =
+    "linear-gradient(0deg, rgba(255,224,0,1) 0%, rgba(120,255,0,1) 100%)";
 
   return (
     <div>
@@ -151,8 +155,8 @@ function Camera() {
                     styles={buildStyles({
                       strokeLinecap: "butt",
                       pathTransitionDuration: 0.5,
-                      pathColor: "rgb(100,100,100)",
-                      trailColor: "rgb(207,207,207)",
+                      pathColor: "rgb(207,207,207)",
+                      trailColor: "rgb(50,50,50)",
                     })}
                   />
                 );
