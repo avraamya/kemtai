@@ -1,0 +1,159 @@
+.root {
+  background-color: #222229;
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-flow: column;
+}
+.logo {
+  height: 6vh;
+  width: 100%;
+  padding: 11px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.logoimage {
+  width: 96px;
+  height: 11.4px;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8vh;
+  width: 100%;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.07;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 78vh;
+  width: 90%;
+}
+.card {
+  display: block;
+  width: 100%;
+  max-width: 343px;
+  height: 100%;
+  max-height: 193px;
+  margin: 8px 0;
+  background-size: cover;
+  background-repeat: round;
+  background-position: initial;
+  background-image: url(../../images/cardio.png);
+}
+
+.timer {
+  margin: 5px;
+  width: 57px;
+  height: 22px;
+  border-radius: 11.4px;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 80%;
+}
+
+.timerLogo {
+  height: 15px;
+  width: 17px;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  fill: white;
+  stroke: white;
+  stroke-width: 2px;
+}
+
+.timerText {
+  margin: 0 0 1px;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.title {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
+  font-size: 38px;
+  font-weight: bold;
+  line-height: 0.84;
+  margin: 14px 154px 0 6px;
+}
+
+.cardunselected {
+  display: block;
+  width: 100%;
+  max-width: 343px;
+  height: 100%;
+  max-height: 193px;
+  margin: 8px 0;
+  background-size: cover;
+  background-repeat: round;
+  background-position: initial;
+  background-image: url(../../images/cardio.png);
+  opacity: 50%;
+}
+
+.cardselect {
+  display: block;
+  width: 100%;
+  max-width: 343px;
+  height: 100%;
+  max-height: 193px;
+  margin: 8px 0;
+  background-size: cover;
+  background-repeat: round;
+  background-position: initial;
+  background-image: url(../../images/cardio.png);
+  position: relative;
+}
+.cardselect ::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 11.4px;
+  padding: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 224, 0, 1),
+    rgba(120, 255, 0, 1)
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8vh;
+  width: 100%;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 8px 0;
+  line-height: 1.07;
+}
+.footertest {
+  border-bottom: 1px dotted;
+  padding: 0 0 2px 0;
+}
+
+.link {
+  text-decoration: none;
+  color: white;
+}
