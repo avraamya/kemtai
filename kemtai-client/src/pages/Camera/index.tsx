@@ -154,7 +154,7 @@ function Camera() {
                     strokeWidth={50}
                     styles={buildStyles({
                       strokeLinecap: "butt",
-                      pathTransitionDuration: 0.5,
+                      pathTransitionDuration: 0,
                       pathColor: "rgb(207,207,207)",
                       trailColor: "rgb(50,50,50)",
                     })}

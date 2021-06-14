@@ -110,8 +110,8 @@ span {
   animation: draw 1s ease-in-out;
 }
 
-@keyframes draw {
+/* @keyframes draw {
   0% {
     height: 0;
   }
-}
+} */
