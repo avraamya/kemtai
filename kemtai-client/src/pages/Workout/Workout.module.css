@@ -50,7 +50,6 @@
   background-size: cover;
   background-repeat: round;
   background-position: initial;
-  background-image: url(../../images/cardio.png);
 }
 
 .timer {
@@ -58,7 +57,6 @@
   width: 57px;
   height: 22px;
   border-radius: 11.4px;
-  background-color: rgb(0, 0, 0);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,7 +100,6 @@
   background-size: cover;
   background-repeat: round;
   background-position: initial;
-  background-image: url(../../images/cardio.png);
   opacity: 60%;
 }
 
@@ -116,7 +113,6 @@
   background-size: cover;
   background-repeat: round;
   background-position: initial;
-  background-image: url(../../images/cardio.png);
   position: relative;
 }
 .cardselect ::before {
